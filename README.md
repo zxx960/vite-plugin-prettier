@@ -13,8 +13,8 @@ import VitePrettier from 'vite-plugin-prettier'
 export default defineConfig({
   plugins: [
     VitePrettier({
-        singleQuote: true,// 字符串是否使用单引号
-        semi: true,// 行尾需要有分号
+      singleQuote: true,// 字符串是否使用单引号
+      //...更多规则
     })
   ],
 })

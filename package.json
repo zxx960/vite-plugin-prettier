@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-prettier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "./index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "zhuxiuxiang",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxx960/vite-plugin-prettier.git"
+  },
   "dependencies": {
     "prettier": "^2.6.2"
   }

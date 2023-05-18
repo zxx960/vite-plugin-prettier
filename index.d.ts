@@ -7,6 +7,6 @@ interface WatchOptions {
 }
 
 
-declare function vuePlugin(rawOptions?: RequiredOptions, watchOptions: WatchOptions): Plugin;
+declare function vuePlugin(rawOptions?: RequiredOptions, watchOptions?: WatchOptions): Plugin;
 
 export { vuePlugin as default };

@@ -5,7 +5,7 @@ const _ = require('lodash')
 
 const FileCache = {};
 
-function VitePrettier(option, watchOptions={}) {
+function VitePrettier(option={}, watchOptions={}) {
     let { watchDirs=[], ignoreDirs=[] } = watchOptions;
     watchDirs = ['vite.config.js', 'vite.config.ts', 'src/']
     let FSWatcher
@@ -27,7 +27,7 @@ function VitePrettier(option, watchOptions={}) {
                 .on('change', _.debounce(path => {
                     FileCache[path] = FileCache[path] || {};
                     let fileStr = fs.readFileSync(path, 'utf8');
-                    if (fileStr == FileCache[path].file || FileCache[path].parsing) return;
+                    if (fileStr === FileCache[path].file || FileCache[path].parsing) return;
                     FileCache[path].parsing = true;
                     const prettierSource = prettier.format(fileStr, {
                         filepath: path,

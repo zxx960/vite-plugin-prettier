@@ -8,6 +8,7 @@
   },
   "author": "zhuxiuxiang",
   "license": "ISC",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zxx960/vite-plugin-prettier.git"

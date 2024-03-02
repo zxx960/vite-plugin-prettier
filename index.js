@@ -7,7 +7,7 @@ const FileCache = {};
 
 function VitePrettier(option={}, watchOptions={}) {
     let { watchDirs=[], ignoreDirs=[] } = watchOptions;
-    watchDirs = ['vite.config.js', 'vite.config.ts', 'src/']
+    watchDirs = ['vite.config.js', 'vite.config.ts', 'src/'].concat(watchDirs);
     let FSWatcher
     return {
         name: 'vite-plugin-prettier',
